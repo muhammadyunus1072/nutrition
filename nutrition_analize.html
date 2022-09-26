@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/output.css">
+</head>
+<body class="bg-slate-100">
+    <nav class="bg-white opacity-80 fixed w-full shadow-lg">
+        <div class="max-w-6xl xl:mx-auto px-4">
+            <div class="flex justify-evenly">
+                <a href="index.html" class="font-semibold text-green-600 text-xl md:text-2xl xl:text-3xl py-4 ">Home</a>
+                <a href="nutrition_analize.html" class="font-semibold text-green-600 text-xl md:text-2xl xl:text-3xl py-4">Nutrition Analyst</a>
+            </div>
+        </div>
+    </nav>
+    <section id="main" class="w-full">
+        <div class="flex justify-center flex-wrap w-full h-full ">
+            <div id="input" class="w-full md:w-[80%] xl:w-1/2 flex justify-center">
+                <div class="w-full mt-32">
+                    <div class="w-full flex justify-center">
+                        <label for="title" class="text-xl font-semibold text-gray-600 pr-4">Title</label>
+                        <input type="text" name="title" id="title" placeholder="Enter Title"  class="h-8 w-1/2 shadow-md rounded-md placeholder:
+                        pl-3 focus:outline-gray-500" >
+                    </div>
+                    
+                    <div id="ingredients" class="w-full mt-8">
+                        <div class="bg-white w-[90%] xl:w-[80%] py-4 mx-auto shadow-lg flex justify-center flex-wrap">
+                            <div class="w-full ingredients">
+                                <div class="w-full flex justify-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                                    <input type="text" name="food_name" class="w-[70%] xl:w-1/2 h-8 shadow-md rounded-md pl-3 border border-gray-400 focus:outline-gray-500" placeholder="Enter Food Name">
+                                    <button type="button" class="btnRemoveIngredients" id="hello">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="fill-slate-500 bi bi-trash self-center hover:cursor-pointer" viewBox="0 0 16 16">
+                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="w-full flex justify-center">
+                                    <div class="w-[70%] xl:w-1/2 flex gap-4">
+                                        <input type="number" name="food_quantity" class="w-[40%] h-8 shadow-md rounded-md pl-3 border border-gray-400 mt-3 focus:outline-gray-500" placeholder="Quantity">
+                                        <!-- <input type="text" name="food_measure" class="w-[60%] h-8 shadow-md rounded-md pl-3 border border-gray-400 mt-3" placeholder="Measure"> -->
+                                        <select class="w-[60%] h-8 shadow-md rounded-md pl-3 border border-gray-400 mt-3 focus:outline-gray-500 hover:cursor-pointer" placeholder="Measure" id="line-0" data-line="0" name="food_measure">	
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_kilogram" value="Kilogram">Kilogram</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_gram" value="Gram">Gram</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_pound" value="Pound">Pound</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_ounce" value="Ounce">Ounce</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_liter" value="Liter">Liter</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_milliliter" value="Milliliter">Milliliter</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_cubic_inch" value="Cubic inch">Cubic inch</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_quart" value="Quart">Quart</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_drop" value="Drop">Drop</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_gallon" value="Gallon">Gallon</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_dash" value="Dash">Dash</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_fluid_ounce" value="Fluid ounce">Fluid ounce</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_pint" value="Pint">Pint</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_pinch" value="Pinch">Pinch</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_cup" value="Cup">Cup</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_teaspoon" value="Teaspoon">Teaspoon</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_tablespoon" value="Tablespoon">Tablespoon</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_dessert_spoon" value="Dessert spoon">Dessert spoon</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_strip" value="Strip">Strip</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_serving" value="Serving">Serving</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_slice" value="Slice">Slice</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_bunch" value="Bunch">Bunch</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_unit" value="Whole">Whole</option>
+                                            <option data-hints="food_ai215e5b85pdh5ajd4aafa3w2zm8" data-measureuri="http://www.edamam.com/ontologies/edamam.owl#Measure_carrot" value="Carrot">Carrot</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="w-full">
+                                    <hr class="w-[20%] border-2 my-5 mx-auto">
+                                </div>
+                            </div>
+
+                            <div class="w-fit flex justify-center hover:cursor-pointer" id="btnAddIngredients">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="fill-gray-700 bi bi-plus-lg self-center" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                                </svg>
+                                <button type="button" class="pl-3 font-semibold text-gray-500"> Add ingredients</button>
+                            </div>
+                        </div>
+                        <div class="w-full flex justify-center mt-5">
+                            <button type="button" class="bg-green-400 py-2 px-5 text-lg font-semibold text-white rounded-md shadow-md" id="btnAnalize">Analize</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="output" class="w-full md:w-2/3 xl:w-1/2">
+                <div class="w-full mt-20">
+                    <!-- <link href="https://www.edamam.com/assets/css/label.css" rel="stylesheet"> -->
+                   <h1 class="text-3xl font-bold text-center mb-2" id="titleText"></h1>
+                    <div class="w-[80%] xl:w-1/2 border-2 border-gray-700 mx-auto px-3">
+                        <div class="w-full flex flex-wrap justify-center">
+                            <span class="font-bold text-4xl">Nutrition Facts</span>                         
+                        </div>
+                        <hr class="border-[6px] border-gray-700 mt-2">
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-3xl">Calories</span>
+                            <span class="font-semibold text-lg self-center" id="calories">-</span>                            
+                        </div>
+                        <hr class="border-4 border-gray-700 mt-2">
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-lg">Total Fat</span>
+                            <span class="font-semibold text-lg self-center" id="totalFat">-</span>                            
+                        </div>
+                        <hr class="border-gray-500">
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Saturated Fat</span>
+                            <span class="font-light text-sm self-center" id="saturatedFat">-</span>                            
+                        </div>
+                        <hr class="border-gray-500 ml-2">
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-lg">Cholesterol</span>
+                            <span class="font-semibold text-lg self-center" id="cholesterol">-</span>                            
+                        </div>
+                        <hr class="border-gray-500">
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-lg">Sodium</span>
+                            <span class="font-semibold text-lg self-center" id="sodium">-</span>                            
+                        </div>
+                        <hr class="border-gray-500">
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-lg">Total Carbohydrate</span>
+                            <span class="font-semibold text-lg self-center" id="carbohydrate">-</span>                            
+                        </div>
+                        <hr class="border-gray-500">
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Dietary Fiber</span>
+                            <span class="font-light text-sm self-center" id="dietaryFiber">-</span>                            
+                        </div>
+                        <hr class="border-gray-500 ml-2">
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Total Sugars</span>
+                            <span class="font-light text-sm self-center" id="totalsugar">-</span>                            
+                        </div>
+                        <hr class="border-gray-500 ml-2">                        
+                        <div class="w-full flex flex-wrap justify-between">
+                            <span class="font-semibold text-lg">Protein</span>
+                            <span class="font-semibold text-lg self-center" id="protein">-</span>                            
+                        </div>
+                        <hr class="border-gray-500">
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Vitamin D</span>
+                            <span class="font-light text-sm self-center" id="vitaminD">-</span>                            
+                        </div>
+                        <hr class="border-gray-500 ml-2">
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-semibold text-lg">Calcium</span>
+                            <span class="font-semibold text-lg self-center" id="calcium">-</span>                           
+                        </div>
+                        <hr class="border-gray-500 ml-2">                        
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-semibold text-lg">Zinc</span>
+                            <span class="font-semibold text-lg self-center" id="zinc">-</span>                             
+                        </div>                      
+                        <hr class="border-gray-500 ml-2">                        
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Iron</span>
+                            <span class="font-light text-sm self-center" id="iron">-</span>                            
+                        </div>
+                        <hr class="border-gray-500 ml-2">                        
+                        <div class="w-full flex flex-wrap justify-between py-1">
+                            <span class="font-light self-center tracking-normal text-sm ml-2">Vitamin C</span>
+                            <span class="font-light text-sm self-center" id="vitaminC">-</span>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

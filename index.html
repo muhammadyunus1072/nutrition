@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Nutrition</title>
+    <link rel="stylesheet" href="src/css/output.css">
 </head>
-<body>
+<body style="">
+    <nav class="bg-white opacity-80 fixed w-full shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-evenly">
+                <a href="index.html" class="font-semibold text-green-600 text-xl md:text-2xl xl:text-3xl py-4 ">Home</a>
+                <a href="nutrition_analize.html" class="font-semibold text-green-600 text-xl md:text-2xl xl:text-3xl py-4">Nutrition Analyst</a>
+            </div>
+        </div>
+    </nav>
+    <section id="main" class="w-full hidden">
+        <img src="src/img/apple.png" alt="apple" class="border" >
+        <img src="src/img/brocolli.png" alt="apple" class="border">
+        <img src="src/img/carrot.png" alt="apple" class="border">
+        <img src="src/img/chicken_meat.png" alt="apple" class="border">
+        <img src="src/img/meat.png" alt="apple" class="border">
+        <img src="src/img/milk.png" alt="apple" class="border">
+        <img src="src/img/nuts.png" alt="apple" class="border">
+        <img src="src/img/spinach.png" alt="apple" class="border">
+    </section>
+    <section class="w-full text-center bg-local bg-cover h-screen" style="background-image: url(src/img/background.jpg)">
+        <div class="pt-40 h-screen">
+            <h3 class="font-semibold text-white text-lg md:text-2xl xl:text-3xl backdrop-blur-sm w-fit mx-auto rounded-md">Nutrition Analysis From EDAMAM API</h3>
+            <p class="text-base md:text-xl xl:text-lg text-white font-semibold w-[90%] md:w-1/2 xl:w-1/3 leading-loose mx-auto mt-10 rounded-xl backdrop-blur-sm">Submit the full text of any recipe or ingredient list. Edamam will extract the full nutrition and ingredient data from the text. No more need to spend hours entering your recipes line by line. The nutrition analysis takes less than a second!</p>
+            <a href="nutrition_analize.html" type="button" class="bg-green-300 py-2 px-4 rounded-md mt-14 xl:mt-5 font-semibold text-lg text-white shadow-lg">Analize Now !</a>
+        </div>
+    </section>
+
     
 </body>
 </html>
