@@ -18,4 +18,3 @@ isolate*.log
 # Generated files
 /src/corePluginList.js
 
-/src/img
